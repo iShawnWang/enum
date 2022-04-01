@@ -1,13 +1,15 @@
+/** Inspired By : https://2ality.com/2020/01/enum-pattern.html */
+
 /**
- * Generic Enum base class
+ * Class based Enum
  * @example
  * Declare :
- *    export class TransportType extends Enum {
- *      static inTransit = new TransportType('1', 'Preparing')
- *      static waitReceiving = new TransportType('2', 'Receiving')
- *      static received = new TransportType('3', 'Received')
- *      static errorHandling = new TransportType('4', 'Error')
- *      static _ = TransportType.closeEnum()
+ *    export class TaskStatus extends Enum {
+ *      static wip = new TaskStatus('1', 'WIP')
+ *      static working = new TaskStatus('2', 'Working')
+ *      static done = new TaskStatus('3', 'Done')
+ *      static error = new TaskStatus('4', 'Error')
+ *      static _ = TaskStatus.closeEnum()
  *      constructor(value: string, label: string) {
  *        super()
  *        this.value = value
@@ -16,10 +18,11 @@
  *    }
  * @example
  * Usage :
- *    const TransportType = TransportType.of<TransportType>(1) // convert value to enum instance
- *    const options = TransportType.options() // get {value, label} options
- *    TransportType.inTransit.label // get label
- *    TransportType.inTransit.value // get value
+ *    const TaskStatus = TaskStatus.of<TaskStatus>(1) // convert value to enum instance
+ *    const options = TaskStatus.options() // get {value, label} options
+ *    TaskStatus.wip.label // get label
+ *    TaskStatus.wip.value // get value
+ *    if(someVar === TaskStatus.wip.value) { ... }
  */
 export default class Enum {
   public static keys: string[];
@@ -83,6 +86,6 @@ export default class Enum {
   public label = '';
 
   public toString() {
-    return `${this.constructor.name}.${this.key}= ${this.label} : ${this.value}`;
+    return `${this.constructor.name}.${this.key} = ${this.label} : ${this.value}`;
   }
 }
