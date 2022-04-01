@@ -23,6 +23,8 @@
  */
 export default class Enum {
   public static keys: string[];
+
+  // eslint-disable-next-line no-use-before-define
   public static values: Enum[];
 
   /**
@@ -31,6 +33,7 @@ export default class Enum {
   public static closeEnum() {
     const enumKeys: string[] = [];
     const enumValues: Enum[] = [];
+    // eslint-disable-next-line no-restricted-syntax
     for (const [key, value] of Object.entries(this)) {
       enumKeys.push(key);
 
@@ -72,17 +75,14 @@ export default class Enum {
   }
 
   public key!: string;
+
   public index!: number;
+
   public value!: string;
-  public label = "";
+
+  public label = '';
 
   public toString() {
-    return (
-      this.constructor.name +
-      "." +
-      this.key +
-      "=" +
-      `${this.label} : ${this.value}`
-    );
+    return `${this.constructor.name}.${this.key}= ${this.label} : ${this.value}`;
   }
 }
