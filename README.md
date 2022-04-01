@@ -2,20 +2,20 @@
 
 Classed Based Enum implementation
 
-**100% Typed**
-**Easy to Expand**
+**100% Typed **  
+**Easy to Expand**  
 
 
 
 
 # Background
 
-Since Typescript Enum is really simple almost like a primary Data Type,
+Since Typescript Enum is really simple almost like a primary Data Type,  
 There are eager for a Standard but also extendable Enum Type
 
 
 
-Insprired By [Swift Language](https://developer.apple.com/swift/)
+Insprired By [Swift Language](https://developer.apple.com/swift/)  
 SourceCode Highly Inspired By [Dr. Axel Rauschmayer : Enum Pattern](https://2ality.com/2020/01/enum-pattern.html)
 
 
@@ -49,7 +49,7 @@ export class TaskStatus extends Enum {
 
   1. **convert value to enum instance** : const TaskStatus = TaskStatus.of<TaskStatus>(`1`)
   2. **get keys** : TaskStatus.keys
-  3. **get values **: TaskStatus.values
+  3. **get values**: TaskStatus.values
   4. **get [{value, label}] options to render View** : const options = TaskStatus.options()
   5. **get Enum label** : TaskStatus.wip.label
   6. **get Enum Value** : TaskStatus.wip.value

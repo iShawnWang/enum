@@ -1,0 +1,9 @@
+src
+src/**/*
+.prettierrc
+.eslintrc.js
+yarn.lock
+.gitignore
+.parcel-cache
+node_modules
+tsconfig.json
