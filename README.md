@@ -2,8 +2,8 @@
 
 Classed Based Enum implementation
 
-**100% Typed **  
-**Easy to Expand**  
+**100% Typed**  
+**Easy to Expand**
 
 
 

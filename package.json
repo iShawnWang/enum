@@ -1,6 +1,6 @@
 {
   "name": "enum-expansion",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Class based enum implementation",
   "source": "src/index.ts",
   "main": "dist/index.js",
