@@ -47,13 +47,13 @@ export class TaskStatus extends Enum {
 
 ### 2. Use Enum
 
-  1. **convert value to enum instance** : const TaskStatus = TaskStatus.of<TaskStatus>(`1`)
-  2. **get keys** : TaskStatus.keys
-  3. **get values**: TaskStatus.values
-  4. **get [{value, label}] options to render View** : const options = TaskStatus.options()
-  5. **get Enum label** : TaskStatus.wip.label
-  6. **get Enum Value** : TaskStatus.wip.value
-  7. **compare** : if(someVar === TaskStatus.wip.value) { ... }
+  1. **convert value to enum instance** : `const TaskStatus = TaskStatus.of<TaskStatus>(`1`)`
+  2. **get keys** : `TaskStatus.keys`
+  3. **get values**: `TaskStatus.values`
+  4. **get [{value, label}] options to render View** : `const options = TaskStatus.options()`
+  5. **get Enum label** : `TaskStatus.wip.label`
+  6. **get Enum Value** : `TaskStatus.wip.value`
+  7. **compare** : `if(someVar === TaskStatus.wip.value) { ... }`
 
 
 
